@@ -1339,7 +1339,7 @@ void AnimationPlayerEditor::_animation_key_editor_seek(float p_pos, bool p_drag,
 	updating = true;
 	frame->set_value(Math::snapped(p_pos, _get_editor_step()));
 	updating = false;
-	_seek_value_changed(p_pos, !p_drag, p_timeline_only);
+	_seek_value_changed(p_pos, true, p_timeline_only);
 }
 
 void AnimationPlayerEditor::_animation_tool_menu(int p_option) {

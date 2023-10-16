@@ -335,7 +335,7 @@ void AnimationPlayerEditor::_animation_selected(int p_which) {
 	}
 
 	AnimationPlayerEditor::get_singleton()->get_track_editor()->update_keying();
-	_animation_key_editor_seek(timeline_position, false);
+	_animation_key_editor_seek(timeline_position);
 
 	emit_signal("animation_selected", current);
 }
@@ -1317,7 +1317,7 @@ void AnimationPlayerEditor::_animation_key_editor_anim_len_changed(float p_len) 
 	frame->set_max(p_len);
 }
 
-void AnimationPlayerEditor::_animation_key_editor_seek(float p_pos, bool p_drag, bool p_timeline_only) {
+void AnimationPlayerEditor::_animation_key_editor_seek(float p_pos, bool p_timeline_only) {
 	timeline_position = p_pos;
 
 	if (!is_visible_in_tree()) {
